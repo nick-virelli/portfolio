@@ -551,6 +551,63 @@ img { display: block; max-width: 100%; }
   color: var(--text-muted);
 }
 
+/* ─── Recommendations ─── */
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.rec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.25s;
+}
+
+.rec-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.rec-quote {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.75;
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  flex: 1;
+}
+
+.rec-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.rec-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.rec-title {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.rec-rel {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -567,6 +624,8 @@ img { display: block; max-width: 100%; }
   .hero-cta { justify-content: center; display: flex; }
 
   .cards-grid { grid-template-columns: 1fr; }
+
+  .rec-grid { grid-template-columns: 1fr; }
 
   .project-card { grid-template-columns: 1fr; }
 
