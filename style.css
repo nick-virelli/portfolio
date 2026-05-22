@@ -553,8 +553,8 @@ img { display: block; max-width: 100%; }
 
 /* ─── Recommendations ─── */
 .rec-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
 }
 
@@ -564,9 +564,6 @@ img { display: block; max-width: 100%; }
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
   transition: box-shadow 0.2s, transform 0.2s, background 0.25s;
 }
 
@@ -576,24 +573,30 @@ img { display: block; max-width: 100%; }
 }
 
 .rec-quote {
-  font-size: 0.95rem;
-  color: var(--text);
-  line-height: 1.75;
+  font-size: 0.87rem;
+  color: var(--text-muted);
+  line-height: 1.7;
   font-style: italic;
   border-left: 3px solid var(--accent);
   padding-left: 1rem;
-  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.rec-quote p + p {
+  margin-top: 0.75rem;
 }
 
 .rec-author {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
 }
 
 .rec-name {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
 }
 
@@ -624,8 +627,6 @@ img { display: block; max-width: 100%; }
   .hero-cta { justify-content: center; display: flex; }
 
   .cards-grid { grid-template-columns: 1fr; }
-
-  .rec-grid { grid-template-columns: 1fr; }
 
   .project-card { grid-template-columns: 1fr; }
 
